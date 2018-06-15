@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {% include "head.html" %}
+    <title>Journal de Bord</title>
+</head>
+<body >
+<!-- Page Content -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <img class="img-fluid mx-auto d-block col-3" style="max-width: 200px;" title="Sentinelle Nord" src={{ url_for('static', filename='images/logo-sentinelle-noir-fr.png') }}>
+</nav>
+{% block body %}
+{% endblock %}
+
+<p style="margin-bottom:6cm;"></p>
+
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
+        <div class=".navbar-text" >Copyright &copy; Université Laval 2018</div>
+</nav>
+
+
+<script type="text/javascript" src={{url_for('static', filename='js/jquery.min.js')}}></script>
+<script type="text/javascript" src={{url_for('static', filename='js/bootstrap.bundle.min.js')}}></script>
+
+{% block scripts %}
+{% endblock %}
+</body>
+
+</html>
