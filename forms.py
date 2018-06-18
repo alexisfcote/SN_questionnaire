@@ -36,5 +36,5 @@ class SNForm(Form):
     workload = IntegerField('workload', [validators.number_range(
         0, 100, message="Évaluez votre effort moyen")])
     tiredness = IntegerField('tiredness', [validators.number_range(
-        0, 100, message="Évaluez votre niveau de fatigue")])
+        0, 100, message="Évaluez votre niveau de fatigue moyen aujourd'hui")])
     

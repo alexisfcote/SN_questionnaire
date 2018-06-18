@@ -1,5 +1,6 @@
 # encoding: utf-8
 import os
+import sys
 import json
 import time
 from collections import OrderedDict
@@ -11,7 +12,15 @@ from forms import *
 from webui import WebUI # Add WebUI to your imports
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+if getattr(sys, 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app = Flask(__name__, template_folder=template_folder,
+                          static_folder = static_folder)
+else:
+    app = Flask(__name__)
+
+
 app.secret_key = os.environ.get('secretkey', 'qweqwe1e2e')
 
 ui = WebUI(app, debug=True) # Create a WebUI instance
@@ -21,7 +30,10 @@ def index():
   
     form = SNForm(request.form)
     if request.method == 'POST' and form.validate():
-        print(form.data)
+        with open(os.path.join(os.path.dirname(sys.executable),
+                  'SN-Journal-de-bord-' + time.strftime('%Y-%m-%d', time.localtime()) + '.json'),
+                   mode='w') as f:
+            json.dump(form.data, f)
         return redirect(url_for('fin'))
 
     if request.method == 'POST' and not form.validate():
