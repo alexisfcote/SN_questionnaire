@@ -2,11 +2,15 @@
 
 block_cipher = None
 
+added_files = [
+         ( './templates/', 'templates' ),
+         ( './static/', 'static' ),
+         ]
 
 a = Analysis(['app.py'],
              pathex=['C:\\Users\\alfoc.ULAVAL\\Desktop\\SN-Questionnaire'],
              binaries=[],
-             datas=[],
+             datas=added_files,
              hiddenimports=['wtforms', 'jinja2'],
              hookspath=[],
              runtime_hooks=[],
