@@ -8,7 +8,7 @@ added_files = [
          ]
 
 a = Analysis(['app.py'],
-             pathex=['C:\\Users\\alexis\\Desktop\\SN_questionnaire'],
+             pathex=['./'],
              binaries=[],
              datas=added_files,
              hiddenimports=['wtforms', 'jinja2'],

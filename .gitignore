@@ -11,7 +11,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
+dist/*
 downloads/
 eggs/
 .eggs/
@@ -111,3 +111,5 @@ static/images/bloc-eevee/
 redis-latest/
 
 upx*
+
+!dist/start.command
