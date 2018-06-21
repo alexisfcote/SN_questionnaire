@@ -8,6 +8,8 @@ Flask = "*"
 WTForm = "*"
 "pyqt5" = "*"
 pyinstaller = "*"
+WebUI = {git = "https://github.com/widdershin/flask-desktop.git"}
+wtforms = "*"
 
 [dev-packages]
 

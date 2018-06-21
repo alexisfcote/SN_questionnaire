@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ffbd8c08dc20bf78bb859d25462885a7d2d10c45e356a0b19c367c743e6e06c8"
+            "sha256": "86602be4188569c7c39c87a311cbba98aeb649e6d8f80b23384d2cdaa5f6291b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -83,6 +83,13 @@
             "index": "pypi",
             "version": "==3.3.1"
         },
+        "pypiwin32": {
+            "hashes": [
+                "sha256:67adf399debc1d5d14dffc1ab5acacb800da569754fafdc576b2a039485aa775",
+                "sha256:71be40c1fbd28594214ecaecb58e7aa8b708eabfa0125c8a109ebd51edbd776a"
+            ],
+            "version": "==223"
+        },
         "pyqt5": {
             "hashes": [
                 "sha256:1e652910bd1ffd23a3a48c510ecad23a57a853ed26b782cd54b16658e6f271ac",
@@ -92,6 +99,19 @@
             ],
             "index": "pypi",
             "version": "==5.10.1"
+        },
+        "pywin32": {
+            "hashes": [
+                "sha256:0df9b008caef10af0d674c483316c28dcf78391332d9d5d380fab667ebf2d7d1",
+                "sha256:249391eb924b8376826e6f84d143d1dcc0e400b238b511d5fbd3811f6ed9ad50",
+                "sha256:42f48567e36b787901ff3da20de5a134cd9880cc90832e2aad60951f058699f0",
+                "sha256:9eff897796c9d76a213134257a01b6f8a122c55e0772847fba313a8091f3ec44",
+                "sha256:c7ea0deabcc324e5b74084b5452003109c592d1aedbe9e9289ed55b26d9b0c7f",
+                "sha256:da422d4067d98b49fbb19d851900a5fc38c61eab0ee803574c27c42309173ebe",
+                "sha256:f0f0e7c82ee334dd6e888b9b5beb05fd8947355fa7a15644c810bb4ea0079ca6",
+                "sha256:fb3c85907918fd01a72ee146d323d220771dee151c0cfa5630c2f35797ffb116"
+            ],
+            "version": "==223"
         },
         "sip": {
             "hashes": [
@@ -110,6 +130,9 @@
             ],
             "version": "==4.19.8"
         },
+        "webui": {
+            "git": "https://github.com/widdershin/flask-desktop.git"
+        },
         "werkzeug": {
             "hashes": [
                 "sha256:c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c",
@@ -123,6 +146,14 @@
             ],
             "index": "pypi",
             "version": "==1.0"
+        },
+        "wtforms": {
+            "hashes": [
+                "sha256:0cdbac3e7f6878086c334aa25dc5a33869a3954e9d1e015130d65a69309b3b61",
+                "sha256:e3ee092c827582c50877cdbd49e9ce6d2c5c1f6561f849b3b068c1b8029626f1"
+            ],
+            "index": "pypi",
+            "version": "==2.2.1"
         }
     },
     "develop": {}

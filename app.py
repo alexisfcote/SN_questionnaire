@@ -49,5 +49,5 @@ def fin():
 
 
 if __name__ == '__main__':
-    #ui.run() 
-    app.run(debug=True, port=5000)
+    ui.run() 
+    #app.run(debug=False, port=5000)
