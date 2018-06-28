@@ -46,7 +46,7 @@ def index():
 
 @app.route('/fin', methods=['GET'])
 def fin():
-    threading.Timer(4, lambda: sys.exit()).start()
+    threading.Timer(4, lambda: os._exit(0)).start()
     return render_template("fin.html")
 
 
