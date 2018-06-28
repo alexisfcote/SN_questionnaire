@@ -5,11 +5,13 @@ import json
 import time
 from collections import OrderedDict
 import random
+import webbrowser
+import threading
+import sys
 from flask import Flask, render_template, request, url_for, redirect, flash, session, abort
 
 from forms import *
 
-from webui import WebUI # Add WebUI to your imports
 from flask import Flask, render_template, request
 
 if getattr(sys, 'frozen', False):
@@ -23,7 +25,6 @@ else:
 
 app.secret_key = os.environ.get('secretkey', 'qweqwe1e2e')
 
-ui = WebUI(app, debug=True) # Create a WebUI instance
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -45,9 +46,10 @@ def index():
 
 @app.route('/fin', methods=['GET'])
 def fin():
+    threading.Timer(4, lambda: sys.exit()).start()
     return render_template("fin.html")
 
 
 if __name__ == '__main__':
-    ui.run() 
-    #app.run(debug=False, port=5000)
+    threading.Timer(2, lambda: webbrowser.open(url="http://127.0.0.1:5000")).start()
+    app.run(debug=False, port=5000)

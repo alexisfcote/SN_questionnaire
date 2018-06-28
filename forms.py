@@ -37,4 +37,8 @@ class SNForm(Form):
         0, 100, message="Évaluez votre effort moyen")])
     tiredness = IntegerField('tiredness', [validators.number_range(
         0, 100, message="Évaluez votre niveau de fatigue moyen aujourd'hui")])
+    commentaires = StringField ('commentaires', 
+                                        [validators.Optional(),],
+                                        widget=TextArea(),
+                                      )
     

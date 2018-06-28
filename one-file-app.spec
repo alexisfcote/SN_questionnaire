@@ -30,5 +30,5 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=False,
-          console=False,
+          console=True,
           icon='static/images/favicon.ico' )
