@@ -4,3 +4,4 @@ cd "${DIR}"
 git stash
 git pull
 python3 -m pipenv shell pyinstaller one-file-app.spec
+zip dist/SN\ Journal\ de\ bord dist/
