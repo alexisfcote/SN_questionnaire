@@ -112,4 +112,5 @@ redis-latest/
 
 upx*
 
+.DS_store
 !dist/start.command
