@@ -32,7 +32,7 @@ def index():
     form = SNForm(request.form)
     if request.method == 'POST' and form.validate():
         with open(os.path.join(os.path.dirname(sys.executable),
-                  'SN-Journal-de-bord-' + time.strftime('%Y-%m-%d', time.localtime()) + '.json'),
+                  'SN-Journal-de-bord-' + time.strftime('%Y-%m-%d-%Hh%M', time.localtime()) + '.json'),
                    mode='w') as f:
             json.dump(form.data, f)
         return redirect(url_for('fin'))
